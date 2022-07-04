@@ -1,4 +1,7 @@
 # djangoFinal
+Enlace para video
+https://drive.google.com/file/d/1FBwffaobb3Rdwy3N3xs9oImil_IbmuZL/view?usp=sharing
+
 
 Proyecto final para el curso de Python y Django
 Realizado Jose Maria Moreno
