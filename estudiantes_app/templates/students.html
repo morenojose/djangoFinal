@@ -1,0 +1,58 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+
+
+{% block contenido %}
+<p></p>
+<h2>Listado de estudiantes</h2>
+<table>
+    {% if request.user.is_authenticated %}
+    <td><a href={% url "alta_alumno" %} class="btn btn-success">Nuevo</a></td>
+    {% endif %}
+    <td><a href={% url "buscar_alumno" %} class="btn btn-light">Buscar</a></td>
+
+
+</table>
+
+<div class="row g-0">
+    <div class="col-lg-12 col-md-8 col-sm-6 .col-md-8">
+        <div class="table-responsive">
+            <table class="table table-striped" >
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th colspan="2">Opciones</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+        {% for c in students %}
+        <tr>
+            <td>{{c.name}}</td>
+            <td>{{c.edad}}</td>
+            <td>{{c.address}}</td>
+            <td>{{c.telefono}}</td>
+            {% if request.user.is_authenticated %}
+            <td><a href={% url "edicion_alumno" c.id %} class="btn btn-secondary">Editar</a></td>
+            <td><a href={% url "eliminar_alumno" c.id %} class="btn btn-danger">Eliminar</a></td>
+            {% endif %}
+        </tr>
+
+    {% endfor %}
+
+    </tbody>
+
+            </table>
+        
+        </div>
+  </div>
+
+{% endblock %}
+

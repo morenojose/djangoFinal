@@ -1,0 +1,52 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+
+
+{% block contenido %}
+<p></p>
+<h2>Listado de cursos</h2>
+<table>
+
+    <td><a href={% url "alta_curso" %} class="btn btn-success">Nuevo</a></td>
+    <td><a href={% url "buscar_curso" %} class="btn btn-light">Buscar</a></td>
+
+
+</table>
+
+<div class="row g-0">
+    <div class="col-lg-12 col-md-8 col-sm-6 .col-md-8">
+        <div class="table-responsive">
+            <table class="table table-striped" >
+        <thead>
+            <tr>
+                <th>Curso</th>
+                <th>Camada</th>
+                <th colspan="2">Opciones</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+        {% for c in curso %}
+        <tr>
+            <td>{{c.curso}}</td>
+            <td>{{c.camada}}</td>
+           
+            <td><a href={% url "edicion_curso" c.id %} class="btn btn-secondary">Editar</a></td>
+            <td><a href={% url "eliminar_curso" c.id %} class="btn btn-danger">Eliminar</a></td>
+
+        </tr>
+
+    {% endfor %}
+
+    </tbody>
+
+            </table>
+        
+        </div>
+  </div>
+
+{% endblock %}

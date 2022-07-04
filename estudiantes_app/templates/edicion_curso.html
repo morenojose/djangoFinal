@@ -1,0 +1,18 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido%}
+<form action = "{% url "edicion_curso"  curso.id %}" method="POST">
+    {% csrf_token %}
+    <p> Nombre:</p>
+    <input type="text" name="curso" value={{curso.curso}}>
+        <p> Direccion: </p>
+    <input type="text" name="camada" value={{curso.camada}}>
+
+    <input type="Submit" value= "Enviar">
+
+
+</form>
+
+{% endblock %}

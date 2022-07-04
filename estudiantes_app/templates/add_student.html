@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<p></p>
+<h1> Agregar alumno </h1> 
+
+<h1> Agregar alumno </h1> 
+{% endblock %}
+
+{% block contenido %}
+<p>
+<h1> Agregar alumno </h1> 
+</p>
+<form method="Post" >
+    {% csrf_token %}
+    
+{{form.as_p}}
+<button>submit</button>
+
+{% endblock %}

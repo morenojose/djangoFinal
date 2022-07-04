@@ -1,0 +1,48 @@
+{% extends "padre.html" %}
+
+
+{% load static %}
+
+<p></p>
+<h2></h2>
+
+
+{% block titulo %}
+{% endblock  %}
+
+{% block contenido%}
+<p></p>
+<p></p>
+<h2>Agregar nuevo curso</h2>
+
+<form action = "alta_docente" method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <tr>
+                <td align="right">Nombre:</td>
+                <td align="left"><input type="text" name="nombre" /></td>
+            </tr>
+            
+            <tr>
+                <td align="right">Telefono:</td>
+                <td align="left"><input type="text" name="telefono" /></td>
+            </tr>
+
+            <tr>
+                <td align="right">Curso:</td>
+                <td align="left"><input type="text" name="curso" /></td>
+            </tr>
+            
+            <tr>
+                <td>  </td>
+                <td align="right"><input type="Submit" value= "Enviar"></td>
+            </tr>
+        </tr>
+    </table>
+</form>
+
+
+{% endblock %}
+
+

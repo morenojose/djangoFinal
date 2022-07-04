@@ -1,0 +1,48 @@
+{% extends "padre.html" %}
+
+
+{% load static %}
+
+
+
+
+{% block contenido %}
+<p></p>
+<h2>Detalles del curso</h2>
+<table>
+
+ 
+
+</table>
+
+<div class="row g-0">
+    <div class="col-lg-12 col-md-8 col-sm-6 .col-md-8">
+        <div class="table-responsive">
+            <table class="table table-striped" >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Curso</th>
+                <th>Camada</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+        
+        <tr>
+            <td>{{curso.id}}</td>
+            <td>{{curso.curso}}</td>
+            <td>{{curso.camada}}</td>
+        </tr>
+
+    
+
+    </tbody>
+
+            </table>
+        
+        </div>
+  </div>
+
+{% endblock %}
