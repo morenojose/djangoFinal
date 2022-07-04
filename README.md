@@ -8,7 +8,8 @@ email: tecnologiajujuy@gmail.com
 
 dos apps separadas
 
-    estudiantes_app (en principio iba a ser una app de estudiantes y otra de profesores despues se dejo una sola)
+    estudiantes_app (en principio iba a ser una app de estudiantes
+    y otra de profesores despues se dejo una sola)
     
     login_app
     
